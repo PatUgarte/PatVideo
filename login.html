@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>PatVideo :: Inicio de sesión</title>
+    </head>
+    <body>
+        <header class="header">
+            <img class="header__img" src="./img/patvideo-logo.png" alt="PatVideo logo">
+        </header>
+
+        <section class="login">
+            <div class="login__container">
+                <h2>Inicia sesión</h2>
+                <form class="login__container--form" action="/" method="POST">
+                    <input class="input" type="text" placeholder="Correo">
+                    <input class="input" type="password" placeholder="Constraseña">
+                    <button class="button" type="submit">Enviar</button>
+                    <div class="login__container--remember-me">
+                        <label>
+                            <input type="checkbox" id="cbox1">Recuérdame
+                        </label>
+                        <a href="/">Olvidé mi contraseña</a>
+                    </div>
+                </form>
+                <section class="login__container--social-networks">
+                    <div>
+                        <img src="./img/google-icon.png" alt="Google icon">
+                        Inicia sesión con Google
+                    </div>
+                    <div>
+                        <img src="./img/twitter-icon.png" alt="Twitter icon">
+                        Inicia sesión con Twitter
+                    </div>
+                </section>
+                <p class="login__container--not-having-account">¿Todavía no tenés una cuenta? <a href="/">Registrate acá</a></p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <a href="/">Términos de uso</a>
+            <a href="/">Declaración de privacidad</a>
+            <a href="/">Centro de ayuda</a>
+        </footer>
+    </body>
+</html>
