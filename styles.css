@@ -1,8 +1,13 @@
 /* GLOBAL */
 
+html {
+    background-color: black;
+}
+
 body {
     margin: 0;
-    background: linear-gradient(#ffa41b, #000);
+    background: linear-gradient(to bottom, #ffa41b, #000);
+    background-size: cover;
     font-family: 'Muli', sans-serif;
     color: white;
 }
@@ -87,6 +92,85 @@ input {
     outline: none;
 }
 
+/* CAROUSEL */
+
+.carousel {
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+
+.carousel__categories--title {
+    padding-left: 30px;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+
+.carousel-item {
+    background-color: tomato;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0px 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel-item:hover~.carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel__container:hover .carousel-item:hover .carousel-item__details {
+    opacity: 1;
+}
+
+.carousel-item__image {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.carousel-item__details img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.carousel-item__details--title,
+.carousel-item__details--subtitle {
+    color: white;
+    font-family: 'Muli', sans-serif;
+}
+
 /* LOGIN */
 
 .login {
@@ -127,7 +211,7 @@ input {
     border: none;
     border-radius: 25px;
     font-size: 16px;
-    color:white;
+    color: white;
     cursor: pointer;
     font-weight: bold;
     height: 40px;
@@ -153,7 +237,7 @@ input {
 .login__container--social-networks div {
     display: flex;
     align-items: center;
-    margin: 30px 0px;   
+    margin: 30px 0px;
 }
 
 .login__container--social-networks div:hover {
@@ -176,6 +260,8 @@ input {
 .login__container--not-having-account a:hover {
     text-decoration: underline;
 }
+
+/* FOOTER */
 
 .footer {
     display: flex;
@@ -201,4 +287,23 @@ input {
 ::placeholder {
     color: white;
     font-style: italic;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+    .header__img {
+        height: 60px;
+    }
+    .login__container {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        min-height: 500px;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
