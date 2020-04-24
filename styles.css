@@ -87,6 +87,115 @@ input {
     outline: none;
 }
 
+/* LOGIN */
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.login__container {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login__container--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form input {
+    width: unset;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+    height: 40px;
+    margin: 20px 40px;
+}
+
+.login__container--remember-me {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 5px;
+}
+
+.login__container--remember-me a {
+    color: white;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+    text-decoration: underline;
+}
+
+.login__container--social-networks div {
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;   
+}
+
+.login__container--social-networks div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login__container--social-networks div img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.login__container--not-having-account a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login__container--not-having-account a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footer a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 /* Pseudo-elemento */
 
 ::placeholder {
