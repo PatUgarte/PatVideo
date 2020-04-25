@@ -1,3 +1,8 @@
+/* Variables SASS */
+$first-background-color: rgb(255, 181, 70);
+$second-background-color: rgb(230, 0, 0);
+$font-color: white;
+
 /* GLOBAL */
 
 html {
@@ -6,10 +11,10 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(to bottom, #ffa41b, #000);
+    background: linear-gradient($first-background-color, $second-background-color);
     background-size: cover;
     font-family: 'Muli', sans-serif;
-    color: white;
+    color: $font-color;
 }
 
 /* HEADER */
@@ -57,7 +62,7 @@ body {
 }
 
 .header__menu li a {
-    color: white;
+    color: $font-color;
     text-decoration: none;
 }
 
@@ -81,12 +86,12 @@ body {
 }
 
 input {
-    border: 2px solid white;
+    border: 2px solid $font-color;
     border-radius: 25px;
     width: 70%;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
-    color: white;
+    color: $font-color;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.25);
     outline: none;
@@ -106,7 +111,7 @@ input {
 }
 
 .carousel__container {
-    white-space: nowrap;
+    $font-color-space: nowrap;
     margin: 70px 0px;
     padding-bottom: 10px;
 }
@@ -165,7 +170,7 @@ input {
 }
 
 .carousel-item__details--title, .carousel-item__details--subtitle {
-    color: white;
+    color: $font-color;
     font-family: 'Muli', sans-serif;
 }
 
@@ -182,7 +187,7 @@ input {
 
 .login__container {
     background-color: rgba(255, 255, 255, 0.25);
-    border: 2px solid white;
+    border: 2px solid $font-color;
     border-radius: 40px;
     padding: 60px 68px 40px;
     min-height: 700px;
@@ -201,7 +206,7 @@ input {
 .login__container--form input {
     width: unset;
     margin-bottom: 20px;
-    color: white;
+    color: $font-color;
 }
 
 .button {
@@ -209,7 +214,7 @@ input {
     border: none;
     border-radius: 25px;
     font-size: 16px;
-    color: white;
+    color: $font-color;
     cursor: pointer;
     font-weight: bold;
     height: 40px;
@@ -224,7 +229,7 @@ input {
 }
 
 .login__container--remember-me a {
-    color: white;
+    color: $font-color;
     text-decoration: none;
 }
 
@@ -249,7 +254,7 @@ input {
 }
 
 .login__container--not-having-account a {
-    color: white;
+    color: $font-color;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
@@ -298,7 +303,7 @@ input {
 }
 
 .footer a {
-    color: white;
+    color: $font-color;
     cursor: pointer;
     text-decoration: none;
     font-size: 14px;
@@ -311,7 +316,7 @@ input {
 /* Pseudo-elemento */
 
 ::placeholder {
-    color: white;
+    color: $font-color;
     font-style: italic;
 }
 
@@ -358,7 +363,7 @@ input {
         animation-timing-function: ease-in-out;
     }
     100% {
-        transform: translateY(700px);
+        transform: translateY(400px);
     }
 }
 

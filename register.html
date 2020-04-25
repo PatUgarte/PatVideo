@@ -4,21 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
         <title>PatVideo :: Inicio de sesión</title>
     </head>
     <body>
         <header class="header">
-            <img class="header__img" src="./img/patvideo-logo.png" alt="PatVideo logo">
+            <img class="header__img" src="./img/patvideo-logo.png" alt="PatVideo logo"  tabindex="0">
         </header>
 
         <section class="login">
             <div class="login__container">
-                <h2>A un paso de algo increible...</h2>
+                <h2 tabindex="0">A un paso de algo increible...</h2>
                 <form class="login__container--form" action="/" method="POST">
-                    <input class="input" type="text" placeholder="Nombre de usuario">
-                    <input class="input" type="email" placeholder="Correo">
-                    <input class="input" type="password" placeholder="Contraseña">
+                    <input class="input" type="text" placeholder="Nombre de usuario" aria-label="Campo para ingresar su Nombre de usuario">
+                    <input class="input" type="email" placeholder="Correo" aria-label="Campo para ingresar su correo">
+                    <input class="input" type="password" placeholder="Contraseña" aria-label="Campo para ingresar su contraseña">
                     <button class="button" type="submit">Registrarme</button>
                 </form>
                 <p class="login__container--not-having-account">¿Ya tenés una cuenta? <a href="/">Iniciá sesión aquí</a></p>
