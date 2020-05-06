@@ -1,0 +1,55 @@
+@import "../Vars.scss";
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header__img {
+    height: 80px;
+}
+
+.header__menu img {
+    height: 50px;
+}
+
+.header__menu p {
+    margin: 0px 20px 0px 5px;
+}
+
+.header__menu--hidden {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+}
+
+.header__menu:hover ul {
+    display: block;
+    margin: 0px 0px 0px 0px;
+}
+
+.header__menu li {
+    margin: 0px 0px 10px 0px;
+}
+
+.header__menu li a {
+    color: $font-color;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}

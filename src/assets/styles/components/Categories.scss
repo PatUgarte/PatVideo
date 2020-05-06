@@ -1,0 +1,19 @@
+/* CATEGORIES */
+
+.carousel {
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0px 30px;
+    position: relative;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel__categories--title {
+    padding-left: 30px;
+}

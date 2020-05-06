@@ -1,0 +1,20 @@
+/* CAROUSEL */
+
+.carousel__container {
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel__container:hover .carousel-item:hover .carousel-item__details {
+    opacity: 1;
+}

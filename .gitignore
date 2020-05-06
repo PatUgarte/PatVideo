@@ -105,3 +105,6 @@ dist
 
 # Pat
 pruebas-img
+initialState.json
+public/htmls
+src/assets/styles/components/css

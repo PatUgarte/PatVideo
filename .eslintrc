@@ -61,7 +61,7 @@
             "property"
         ],
         "dot-notation": 0,
-        "eol-last": 2,
+        "eol-last": 0,
         "eqeqeq": [
             2,
             "allow-null"
@@ -78,8 +78,8 @@
             "^(err|error|anySpecificError)$"
         ],
         "indent": [
-            2,
-            2,
+            "error",
+            4,
             {
                 "SwitchCase": 1
             }
@@ -242,7 +242,7 @@
         "radix": 2,
         "jsx-quotes": [
             2,
-            "prefer-single"
+            "prefer-double"
         ],
         "jsx-a11y/click-events-have-key-events": 0,
         "jsx-a11y/no-noninteractive-element-interactions": 0,
@@ -258,9 +258,13 @@
             2,
             "never"
         ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
         "react/jsx-indent-props": [
-            2,
-            2
+            "error",
+            4
         ],
         "react/jsx-no-bind": [
             2,

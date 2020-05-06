@@ -1,5 +1,20 @@
+@import "./Vars.scss";
+@import "./Media.scss";
+
+/* GLOBAL */
+
 body {
+    width: 100vw;
     margin: 0;
-    background-color: tomato;
-    color: white;
+    background: linear-gradient($first-background-color, $second-background-color);
+    background-size: cover;
+    font-family: $main-font;
+    color: $font-color;
+}
+
+/* Pseudo-elemento */
+
+::placeholder {
+    color: $font-color;
+    font-style: italic;
 }
