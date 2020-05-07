@@ -23,7 +23,7 @@ const App = () => {
             <SearchBar />
             {categories.map((category) => (
                 videos[category].length > 0 && (
-                    <Categories title={category}>
+                    <Categories key={category} title={category}>
                         <Carousel>
                             {videos[category].map((item) => (
                                 <CarouselItem key={item.id} {...item} />
