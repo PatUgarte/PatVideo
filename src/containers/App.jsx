@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from "react";
 
-import Header from "../Header";
-import SearchBar from "../SearchBar";
-import Categories from "../Categories";
-import Carousel from "../Carousel";
-import CarouselItem from "../CarouselItem";
-import Footer from "../Footer";
+import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
+import Categories from "../components/Categories";
+import Carousel from "../components/Carousel";
+import CarouselItem from "../components/CarouselItem";
+import Footer from "../components/Footer";
 
-import "../../assets/styles/App.scss";
+import useInitialState from "../hooks/useInitialState";
+
+import "../assets/styles/App.scss";
 
 const API = "http://localhost:3000/initialState";
 
 const App = () => {
-    const [videos, setVideos] = useState({ "mylist": [], "trends": [], "original": [] });
 
-    useEffect(() => {
-        fetch(API)
-            .then((response) => response.json())
-            .then((data) => setVideos(data));
-    }, []);
+    const [videos, categories] = useInitialState(API);
 
     return (
         <div>
             <Header />
             <SearchBar />
-            {(Object.keys(videos)).map((category, index) => (
+            {categories.map((category) => (
                 videos[category].length > 0 && (
                     <Categories title={category}>
                         <Carousel>
