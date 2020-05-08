@@ -1,0 +1,16 @@
+.sign__container--social-networks div {
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.sign__container--social-networks div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sign__container--social-networks div img {
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 25px;
+}

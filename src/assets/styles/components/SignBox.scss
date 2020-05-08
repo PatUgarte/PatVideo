@@ -1,0 +1,23 @@
+@import "../Vars.scss";
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.sign__container {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid $font-color;
+    border-radius: 40px;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -1,0 +1,18 @@
+@import "../Vars.scss";
+
+.sign__container--not-having-account {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sign__container--not-having-account a {
+    color: $font-color;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sign__container--not-having-account a:hover {
+    text-decoration: underline;
+}

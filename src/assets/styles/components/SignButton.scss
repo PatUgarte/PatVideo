@@ -1,0 +1,14 @@
+@import "../Vars.scss";
+
+.sign-button {
+    height: auto;
+    background-color: $font-color;
+    border: 4px solid $first-background-color;
+    border-radius: 40px;
+    font-size: 22px;
+    font-weight: 900;
+    color: $second-background-color;
+    cursor: pointer;
+    margin: 20px 40px;
+    padding: 20px;
+}
