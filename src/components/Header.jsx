@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../assets/styles/components/Header.scss";
 
 import patVideoLogo from "../assets/static/patvideo-logo.png";
@@ -6,17 +8,17 @@ import profileLogo from "../assets/static/cat-profile-filled.png";
 
 const Header = () => (
     <header className="header">
-        <a href="/">
+        <Link to="/">
             <img className="header__img" src={patVideoLogo} alt="PatVideo logo" />
-        </a>
+        </Link>
         <div className="header__menu">
             <div className="header__menu--hidden">
                 <img src={profileLogo} alt="Profile logo" />
                 <p>Perfil</p>
             </div>
             <ul>
-                <li><a href="/login">Cuenta</a></li>
-                <li><a href="/register">Cerrar Sesión</a></li>
+                <li><Link to="/login">Cuenta</Link></li>
+                <li><Link to="/register">Cerrar Sesión</Link></li>
             </ul>
         </div>
     </header>

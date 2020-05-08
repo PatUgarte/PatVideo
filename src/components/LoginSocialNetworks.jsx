@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../assets/styles/components/LoginSocialNetworks.scss";
 
@@ -7,14 +8,14 @@ import twitterIcon from "../assets/static/twitter-icon.png";
 
 const LoginSocialNetworks = () => (
     <section className="sign__container--social-networks">
-        <div>
+        <Link to="/">
             <img src={googleIcon} alt="Google icon" />
             Inicia sesión con Google
-        </div>
-        <div>
+        </Link>
+        <Link to="/">
             <img src={twitterIcon} alt="Twitter icon" />
             Inicia sesión con Twitter
-        </div>
+        </Link>
     </section>
 );
 

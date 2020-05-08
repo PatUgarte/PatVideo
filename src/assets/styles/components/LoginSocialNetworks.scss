@@ -1,15 +1,19 @@
-.sign__container--social-networks div {
+@import "../Vars.scss";
+
+.sign__container--social-networks a {
     display: flex;
     align-items: center;
     margin: 30px 0px;
+    color: $font-color;
+    text-decoration: none;
 }
 
-.sign__container--social-networks div:hover {
+.sign__container--social-networks a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.sign__container--social-networks div img {
+.sign__container--social-networks a img {
     width: 30px;
     margin-right: 10px;
     margin-left: 25px;

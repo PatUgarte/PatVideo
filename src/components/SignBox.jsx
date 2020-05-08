@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "../assets/styles/components/SignBox.scss";
 
@@ -10,5 +11,9 @@ const SignBox = ({ children, title }) => (
         </div>
     </section>
 );
+
+SignBox.propTypes = {
+    title: PropTypes.string.isRequired,
+};
 
 export default SignBox;

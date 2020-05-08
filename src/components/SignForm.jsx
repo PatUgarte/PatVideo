@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "../assets/styles/components/SignForm.scss";
 
@@ -7,5 +8,9 @@ const SignForm = ({ children, action }) => (
         {children}
     </form>
 );
+
+SignForm.proptypes = {
+    action: PropTypes.string.isRequired,
+};
 
 export default SignForm;

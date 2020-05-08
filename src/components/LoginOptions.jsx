@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../assets/styles/components/LoginOptions.scss";
 
@@ -8,7 +9,7 @@ const LoginOptions = () => (
             <input type="checkbox" id="cbox1" />
             Recuérdame
         </label>
-        <a href="/">Olvidé mi contraseña</a>
+        <Link to="/">Olvidé mi contraseña</Link>
     </div>
 );
 

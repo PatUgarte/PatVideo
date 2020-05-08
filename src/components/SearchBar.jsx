@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../assets/styles/components/SearchBar.scss";
 
 const SearchBar = () => (
