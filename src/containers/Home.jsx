@@ -1,11 +1,9 @@
 import React from "react";
 
-import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
 import Carousel from "../components/Carousel";
 import CarouselItem from "../components/CarouselItem";
-import Footer from "../components/Footer";
 
 import useInitialState from "../hooks/useInitialState";
 
@@ -18,8 +16,7 @@ const Home = () => {
     const [videos, categories] = useInitialState(API);
 
     return (
-        <div>
-            <Header />
+        <>
             <SearchBar />
             {categories.map((category) => (
                 videos[category].length > 0 && (
@@ -31,8 +28,7 @@ const Home = () => {
                         </Carousel>
                     </Categories>
                 )))}
-            <Footer />
-        </div>
+        </>
     );
 };
 
