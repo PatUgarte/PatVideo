@@ -13,6 +13,8 @@ const Home = ({ myList, trends, originals }) => {
     const lists = [myList, trends, originals];
     const categories = ["Mi Lista", "Tendencias", "Originales de PatVideo"];
 
+    const isItFavorite = (id) => (myList.find((movie) => movie.id === id));
+
     return (
         <>
             <SearchBar />
@@ -22,7 +24,11 @@ const Home = ({ myList, trends, originals }) => {
                         <Categories key={category} title={category}>
                             <Carousel>
                                 {lists[i].map((item) => (
-                                    <CarouselItem key={item.id} {...item} />
+                                    <CarouselItem
+                                        key={item.id}
+                                        {...item}
+                                        isFavorite={isItFavorite(item.id)}
+                                    />
                                 ))}
                             </Carousel>
                         </Categories>
