@@ -7,3 +7,8 @@ export const unsetFavorite = (payload) => ({
     type: "UNSET_FAVORITE",
     payload,
 });
+
+export const submitUser = (payload) => ({
+    type: "SUBMIT_USER",
+    payload,
+});

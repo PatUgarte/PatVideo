@@ -1,4 +1,37 @@
+@import "../Vars.scss";
+
 .sign__container--form {
     display: flex;
     flex-direction: column;
+}
+
+.sign-input {
+    width: unset;
+    margin-bottom: 20px;
+    color: $font-color;
+}
+
+.sign__container--remember-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0px 5px;
+}
+
+.sign__container--remember-me label:hover {
+    cursor: pointer;
+}
+
+.sign__container--remember-me input {
+    width: auto;
+}
+
+.sign__container--remember-me a {
+    color: $font-color;
+    text-decoration: none;
+}
+
+.sign__container--remember-me a:hover {
+    text-decoration: underline;
 }

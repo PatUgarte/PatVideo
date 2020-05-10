@@ -2,13 +2,17 @@
 
 .sign-button {
     height: auto;
-    background-color: $font-color;
+    background-color: rgba($color: $font-color, $alpha: 0.85);
     border: 4px solid $first-background-color;
     border-radius: 40px;
     font-size: 22px;
     font-weight: 900;
     color: $second-background-color;
     cursor: pointer;
-    margin: 20px 40px;
+    margin: 30px;
     padding: 20px;
+
+    &:hover {
+        background-color: $font-color;
+    }
 }

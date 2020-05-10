@@ -7,7 +7,11 @@ import App from "./routes/App";
 import reducer from "./reducers";
 
 const initialState = {
-    "user": {},
+    "user": {
+        "username": "",
+        "email": "",
+        "password": "",
+    },
     "playing": {},
     "myList": [],
     "trends": [
@@ -171,10 +175,10 @@ const initialState = {
         },
     ],
 };
-const store = createStore(reducer, initialState);
+const moviesStore = createStore(reducer, initialState);
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={moviesStore}>
         <App />
     </Provider>,
     document.getElementById("app"),
