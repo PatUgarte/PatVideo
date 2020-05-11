@@ -15,10 +15,17 @@ const reducer = (state, action) => {
                 myList: state.myList.filter((video) => (video.id !== action.payload)),
             };
         case "SUBMIT_USER":
-            console.log("SUBMITING USER...");
             return {
                 ...state,
                 user: { ...state.user, ...action.payload },
+            };
+        case "TOGGLE_LOG":
+            return {
+                ...state,
+                user: {
+                    ...state.user,
+                    loggedIn: action.payload,
+                },
             };
         default:
             return state;

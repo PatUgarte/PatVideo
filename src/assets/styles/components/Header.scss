@@ -39,10 +39,12 @@
 .header__menu:hover ul {
     display: block;
     margin: 0px 0px 0px 0px;
+    right: 30px;
 }
 
 .header__menu li {
     margin: 0px 0px 10px 0px;
+    align-self: flex-end;
 }
 
 .header__menu li a {
@@ -52,4 +54,8 @@
 
 .header__menu li a:hover {
     text-decoration: underline;
+}
+
+.header__profile-picture {
+    border-radius: 25px;
 }

@@ -11,6 +11,7 @@ const initialState = {
         "username": "",
         "email": "",
         "password": "",
+        "loggedIn": false,
     },
     "playing": {},
     "myList": [],

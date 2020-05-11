@@ -12,3 +12,8 @@ export const submitUser = (payload) => ({
     type: "SUBMIT_USER",
     payload,
 });
+
+export const toggleLog = (payload) => ({
+    type: "TOGGLE_LOG",
+    payload,
+});

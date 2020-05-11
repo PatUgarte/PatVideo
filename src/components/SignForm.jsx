@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import PropTypes from "prop-types";
 
-import { submitUser } from "../actions";
+import { submitUser, toggleLog } from "../actions";
 
 import "../assets/styles/components/SignForm.scss";
 
@@ -23,19 +23,23 @@ const SignForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (!(form.email && form.password && form.username)) return;
+        props.submitUser(form);
+        props.history.push("/login");
+    };
 
+    const handleLogin = (event) => {
+        event.preventDefault();
         if (!(form.email && form.password)) return;
-
-        if (!hasAccount) {
-            if (!(form.username)) return;
-            props.submitUser(form);
-        } else if (form.email !== props.email || form.password !== props.password) return;
-
+        if (form.email !== props.email || form.password !== props.password) return;
+        props.toggleLog(true);
         props.history.push("/");
     };
 
+    const formHandler = hasAccount ? handleLogin : handleSubmit;
+
     return (
-        <form className="sign__container--form" onSubmit={handleSubmit}>
+        <form className="sign__container--form" onSubmit={formHandler}>
             {!hasAccount && (
                 <input
                     className="sign-input"
@@ -81,6 +85,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
     submitUser,
+    toggleLog,
 };
 
 SignForm.propTypes = {
