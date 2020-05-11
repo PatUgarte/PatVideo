@@ -17,3 +17,8 @@ export const toggleLog = (payload) => ({
     type: "TOGGLE_LOG",
     payload,
 });
+
+export const setPlayingState = (payload) => ({
+    type: "SET_PLAYING_STATE",
+    payload,
+});

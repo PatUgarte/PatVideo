@@ -27,6 +27,14 @@ const reducer = (state, action) => {
                     loggedIn: action.payload,
                 },
             };
+        case "SET_PLAYING_STATE":
+            return {
+                ...state,
+                playing:
+                    state.trends.find((item) => item.id === Number(action.payload)) ||
+                    state.originals.find((item) => item.id === Number(action.payload)) ||
+                    undefined,
+            };
         default:
             return state;
     }
