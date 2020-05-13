@@ -7,8 +7,15 @@
 
 .sign-input {
     width: unset;
-    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-family: $main-font;
+    font-size: 16px;
     color: $font-color;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid $font-color;
+    border-radius: 25px;
+    outline: none;
 }
 
 .sign__container--remember-me {

@@ -22,3 +22,8 @@ export const setPlayingState = (payload) => ({
     type: "SET_PLAYING_STATE",
     payload,
 });
+
+export const setSearchResult = (payload) => ({
+    type: "SET_SEARCH_RESULT",
+    payload,
+});

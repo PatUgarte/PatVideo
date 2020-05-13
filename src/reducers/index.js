@@ -35,6 +35,19 @@ const reducer = (state, action) => {
                     state.originals.find((item) => item.id === Number(action.payload)) ||
                     undefined,
             };
+        case "SET_SEARCH_RESULT":
+            const searchBy = action.payload.searchBy ? action.payload.searchBy : "title";
+            return {
+                ...state,
+                searchParams: action.payload,
+                searchResults: searchBy === "id" || searchBy === "year" ? [
+                    ...state.trends.filter((item) => item[searchBy] === Number(action.payload.query)),
+                    ...state.originals.filter((item) => item[searchBy] === Number(action.payload.query)),
+                ] : [
+                    ...state.trends.filter((item) => (item[searchBy].toLowerCase()).includes(action.payload.query.toLowerCase())),
+                    ...state.originals.filter((item) => (item[searchBy].toLowerCase()).includes(action.payload.query.toLowerCase())),
+                ],
+            };
         default:
             return state;
     }

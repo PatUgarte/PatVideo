@@ -15,8 +15,6 @@ const Header = (props) => {
     const { user } = props;
     const profilePic = createGravatar(user.email);
 
-    console.log("props", props);
-
     const handleLogout = () => {
         props.toggleLog(false);
     };
@@ -28,19 +26,31 @@ const Header = (props) => {
             </Link>
             <div className="header__menu">
                 <div className="header__menu--hidden">
-                    {
-                        user.loggedIn ?
-                            <img className="header__profile-picture" src={profilePic} alt={user.username} /> :
-                            <img className="header__profile-picture" src={profileLogo} alt="Profile logo" />
-                    }
+                    {user.loggedIn ? (
+                        <img
+                            className="header__profile-picture"
+                            src={profilePic}
+                            alt={user.username}
+                        />
+                    ) : (
+                        <img
+                            className="header__profile-picture"
+                            src={profileLogo}
+                            alt="Profile logo"
+                        />
+                    )}
                     <p>{user.loggedIn ? user.username : "Perfil"}</p>
                 </div>
                 <ul>
-                    {
-                        user.loggedIn ?
-                            <li><Link to="#logout" onClick={handleLogout}>Cerrar Sesión</Link></li> :
-                            <li><Link to="/login">Iniciar Sesión</Link></li>
-                    }
+                    {user.loggedIn ? (
+                        <li>
+                            <Link to="#logout" onClick={handleLogout}>Cerrar Sesión</Link>
+                        </li>
+                    ) : (
+                        <li>
+                            <Link to="/login">Iniciar Sesión</Link>
+                        </li>
+                    )}
                 </ul>
             </div>
         </header>
